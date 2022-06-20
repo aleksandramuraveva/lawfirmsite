@@ -1,0 +1,10 @@
+
+
+
+//mixins for flexbox
+
+@mixin flexbox-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,44 @@
+
+@forward 'globals';
+@forward 'layout';
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  //background-image: linear-gradient(rgba(77,58,122,0.7),rgba(77,58,122,0.7)),url(app/img/banner1.jpg);
+  background-image: linear-gradient(rgba(243, 237, 207, 0.6),rgba(243, 237, 207, 0.6)),url(/app/img/banner2.jpg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+
+  &__nav{
+
+    .nav__logo {
+      font-size: 2rem;
+      color: crimson;
+      font-weight: bold;
+    }
+
+    .nav__links {
+      flex: 1;
+      text-align: right;
+
+      li {
+        display: inline-block;
+        padding: 10px 11px;
+        position: relative;
+      }
+
+      a {
+        color: var(--text-colour-dark);
+        font-size: 1.3rem;
+      }
+
+      a:hover {
+        color: var(--primary-colour);
+      }
+    }
+
+  }
+}
+
