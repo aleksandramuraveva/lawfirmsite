@@ -1,7 +1,9 @@
-
+@use 'util';
 @forward 'globals';
 @forward 'layout';
 
+
+/*..........HEADER............*/
 .header {
   min-height: 100vh;
   width: 100%;
@@ -15,30 +17,210 @@
 
     .nav__logo {
       font-size: 2rem;
-      color: crimson;
+      color: var(--primary-colour);
       font-weight: bold;
     }
+     
+    ion-icon {
+      display: none;
+      width: 48px;
+      height: 60px;
 
+      @include util.breakpoint-down(small) {
+        display: inline;
+      }
+
+    }
     .nav__links {
       flex: 1;
       text-align: right;
+      transition: 0.8s;
+
+      ion-icon {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        top: 0.1em;
+        right: 2em;
+
+        @include util.breakpoint-down(small) {
+          display: block;
+        }
+      }
+
+      @include util.breakpoint-down(small) {
+        position: absolute;
+        background-color: var(--primary-colour);
+        height: 90vh;
+        width: 100%;
+        top: -3000px;
+        left: 0;
+        text-align: right;
+        z-index: 2;
+        padding: 7em 2em 0.5em 0;
+      }
 
       li {
         display: inline-block;
         padding: 10px 11px;
         position: relative;
+
+        @include util.breakpoint-down(small) {
+         display: block;
+        }
       }
 
       a {
         color: var(--text-colour-dark);
         font-size: 1.3rem;
+        transition: 0.8s;
+
+        @include util.breakpoint-down(small) {
+          color: var(--background-colour);
+         }
       }
 
       a:hover {
-        color: var(--primary-colour);
+        color: var(--accent-colour);
       }
     }
 
   }
+
+  .btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500;
+    padding: 1.2em 3.5em;
+    border-radius: 6px;
+    font-size: 1rem;
+    border: 1px solid var(--accent-colour);
+    transition: 0.8ss;
+
+  }
+
+  .btn:hover {
+    background-color: var(--accent-colour-dark);
+  }
+
+  &__hero {
+    max-width: 500px;
+    @include util.content-center;
+    text-align: center;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      margin-top: 3em;
+
+      @include util.breakpoint-down(small) {
+        font-size: 1.8rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1em 0 2em;
+
+      @include util.breakpoint-down(small) {
+        font-size: 1rem;
+      }
+    }
+
+    .hero__btn {
+      display: inline-block;
+      background-color: var(--accent-colour);
+      color: #fff;
+      font-weight: 500;
+      padding: 1.2em 3.5em;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      border: 0.8px solid var(--accent-colour-dark);
+      position: relative;
+
+      @include util.breakpoint-down(small) {
+        font-size: 0.9rem;
+      }
+
+    }
+  }
+}
+/*..........HEADER end............*/
+
+/*..........SERVICES............*/
+.services {
+  &__wrapper {
+    // @include util.flexbox-sb;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5em;
+    flex-wrap: wrap;
+
+    // @include util.breakpoint-down(medium) {
+    //   flex-direction: column;
+    // }
+  }
+
+  &__card {
+    // max-width: 380px;
+    // min-width: 280px;
+    flex: 0 1 31%;
+    background-color: var(--primary-colour);
+    border-radius: 6px;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    transition: 0.8s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+
+    h2 {
+      font-weight: 600;
+      margin: 0.6em 0;
+      text-transform: uppercase;
+    }
+
+    li>a {
+      color: var(--text-colour-light);
+    }
+   
+    @include util.breakpoint-down(small) {
+      flex: 0 1 49%;
+    }
+      
+    @include util.breakpoint-down(mobile) {
+      flex: 0 1 100%;
+    }
+
+      
+
+  }
+  
+  &__card:hover {
+    box-shadow: 0 0 18px 0 hsl(144, 100%, 46%, 0.2);
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-top: 1.2em;
+    background-color: transparent;
+    color: var(--accent-colour);
+    font-weight: 500;
+    padding: 0.7em 2em;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    border: 2px solid var(--accent-colour);
+    align-self: center;
+  }
+
+
 }
 
+
+/*..........SERVICES end............*/

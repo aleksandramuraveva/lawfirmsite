@@ -12,8 +12,10 @@
 <!--..................HEADER.............. -->
     <section class="header">
       <nav class="header__nav nav container">
-        <a class="nav__logo" href="index.html"><img src="" alt="logo">LOGO</a>
+        <a class="nav__logo" href="index.html"><img src="" alt="">Защитники<br>Права</a>
+        
         <div class="nav__links">
+          <ion-icon name="close-sharp" onclick="closeMenu()"></ion-icon>
           <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">О компании</a></li>
@@ -21,15 +23,179 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </div>
+        <ion-icon name="menu-sharp" onclick="openMenu()"></ion-icon>
       </nav>
+
+      <div class="header__hero hero">
+        <h1>Профессиональная юридическая помощь</h1>
+        <p>Гарантируем индивидуальный подход и подбор индивидуального решения ваших проблем. Работаем по всей территории России
+        </p>
+        <a href="#" class="hero__btn btn">НАШИ УСЛУГИ
+        </a>
+      </div>
     </section>
 
 <!--..................HEADER.............. -->
+
+<!--..................SERVICES.............-->
+
+    <section class="services section">
+      <h1 class="section__title">Наши услуги</h1>
+      <p section__text>Не навязываем дополнительные услуги. Делаем только то, что вам необходимо.</p>
+
+      <div class="services__wrapper">
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Семейное право</h2>
+            <ul>
+              <li><a href="#">Расторжение брака</a></li>
+              <li><a href="#">Раздел имущества.</a></li>
+              <li><a href="#">Раздел ипотеки и кредитов.</a></li>
+              <li><a href="#">Споры о детях</a></li>
+              <li><a href="#">Споры по алиментам</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Жилищное право</h2>
+            <ul>
+              <li><a href="#">Споры по праву собственности</a></li>
+              <li><a href="#">Споры с УК, ТСЖ</a></li>
+              <li><a href="#">Споры по вселению и выселению</a></li>
+              <li><a href="#">Споры с застройщиком</a></li>
+              <li><a href="#">Наслественные споры</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Наследственное право</h2>
+            <ul>
+              <li><a href="#">Раздел имущества</a></li>
+              <li><a href="#">Оспаривание наследства</a></li>
+              <li><a href="#">Восстановление сроков вступления</a></li>
+              <li><a href="#">Признание наследника недостойными</a></li>
+              <li><a href="#">Помощь при наследстве с долгами</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Трудовое право</h2>
+            <ul>
+              <li><a href="#">Незаконное увольнение</a></li>
+              <li><a href="#">Задержка зарплаты</a></li>
+              <li><a href="#">Невыплаты зарплаты</a></li>
+              <li><a href="#">Прозводственная травма</a></li>
+              <li><a href="#">Жалоба на работодателя</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Медицинское право</h2>
+            <ul>
+              <li><a href="#">Споры с гос. учреждениями</a></li>
+              <li><a href="#">Споры с частными клиниками</a></li>
+              <li><a href="#">Споры с косметологией</a></li>
+              <li><a href="#">Споры со стоматологией</a></li>
+              <li><a href="#">Жалоба на медучреждение</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Финансовое право</h2>
+            <ul>
+              <li><a href="#">Возврат денег из КПК</a></li>
+              <li><a href="#">Возврат денег от брокера</a></li>
+              <li><a href="#">Возврат денег из криптовалют</a></li>
+              <li><a href="#">Возврат денег с форекс рынков</a></li>
+              <li><a href="#">Возврат денег из других площадок</a></li>
+            </ul>
+          </div> 
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Миграционное право</h2>
+            <ul>
+              <li><a href="#">Помощь в получении РВП</a></li>
+              <li><a href="#">Помощь в получении ВНЖ</a></li>
+              <li><a href="#">Получение гражданства РФ</a></li>
+              <li><a href="#">Гражданство в упрощенном порядке</a></li>
+              <li><a href="#">Юрист по депортации и выдворении</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Арбитражное право</h2>
+            <ul>
+              <li><a href="#">Споры по договору подряда</a></li>
+              <li><a href="#">Споры по договору поставки</a></li>
+              <li><a href="#">Споры по договору аренды</a></li>
+              <li><a href="#">Споры по договору лизинга</a></li>
+              <li><a href="#">Споры по госзакупкам 44-ФЗ</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+        <div class="services__card">
+          <div class="services__content">
+            <h2>Другие услуги</h2>
+            <ul>
+              <li><a href="#">Банкротство</a></li>
+              <li><a href="#">Защита прав потребителей</a></li>
+              <li><a href="#">Автоспоры</a></li>
+              <li><a href="#">Таможенное право</a></li>
+              <li><a href="#">Представительство в суде</a></li>
+            </ul>
+          </div>
+          <a href="#" class="services__btn">Подробнее</a>
+        </div>
+      </div>
+
+
+    </section>
+
+
+<!--..................SERVICES end.............-->
 
 
 
 
 
   </div>
+<!-- .........icons from ionic.io......... -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- .........icons from ionic.io......... -->
+
+<!-- ..........mobile menu js script............. -->
+  <script>
+    const menu = document.querySelector(".nav__links");
+
+    function openMenu() {
+      menu.style.top = "0";
+    }
+
+    function closeMenu() {
+      menu.style.top = "-3000px";
+    }
+
+
+  </script>
+
+
+<!-- ..........mobile menu js script............. -->
 </body>
 </html>

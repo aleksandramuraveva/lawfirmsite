@@ -1,5 +1,7 @@
 @use '../util';
 
+//styles that we often apply or use 
+
 body {
   margin: 0;
   padding: 0;
@@ -9,11 +11,31 @@ body {
 }
 
 .container {
-  // width: 100%;
-  
   width: min(100% - 40px, 1400px);
   margin-inline: auto;
   // display: flex;
   @include util.flexbox-sb;
 
+}
+
+//style rules which we aplly to every section
+
+.section {
+  width: min(100% - 40px, 1400px);
+  margin-inline: auto;
+  text-align: center;
+  padding-top: 4.5em;
+  
+  .section__title {
+    font-size: 2.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+  
+  .section__text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+    padding: 1em;
+  }
 }
