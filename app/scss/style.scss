@@ -219,8 +219,101 @@
     align-self: center;
   }
 
+  &__btn:hover {
+    color: var(--text-colour-light);
+    background-color: var(--accent-colour-dark);
+  }
+
 
 }
 
-
 /*..........SERVICES end............*/
+
+/*..........ABOUT US............*/
+.about-us {
+
+  img {
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  &__wrapper {
+    // @include util.flexbox-sb;
+    margin-top: 2.5em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+
+  &__column {
+    text-align: left;
+    flex: 0 1 48%;
+
+    p {
+      padding-right: 0.7em;
+      @include util.breakpoint-down(small) {
+        padding-top: 2em;
+      }
+    }
+
+    @include util.breakpoint-down(small) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__advantages {
+    margin-top: 1.5em;
+    padding: 1em;
+    width: 100%;
+    // text-align: center;
+    background-color: var(--primary-colour);
+
+
+    .advantages__title {
+      font-weight: 600;
+      margin: 0.6em 0;
+      text-transform: uppercase;
+      color: var(--text-colour-light);
+    }
+
+    .advantages__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @include util.breakpoint-down(small) {
+        text-align: left;
+       }
+      
+
+      li {
+        min-width: 190px;
+        padding: 1.5em 2em;
+        color: var(--text-colour-light);
+        
+        ion-icon {
+          padding:0 0.6em;
+          color: var(--accent-colour-dark);
+        }
+        @include util.breakpoint-down(medium) {
+          padding:1.5em 0.7em;
+         }
+
+        @include util.breakpoint-down(small) {
+         width: 100%;
+        }
+        
+      }
+    }
+
+
+  }
+  
+ 
+
+}
+
+/*..........ABOUT US end............*/
